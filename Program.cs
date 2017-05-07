@@ -98,8 +98,51 @@ namespace ConsoleApp6
             Console.WriteLine();
             Console.ReadKey();
 
+            Console.WriteLine();
+            Console.WriteLine(" Hierbij een oefening met Arrays ");
+
+            string[] tvSeries =
+            {
+                "Fargo",
+                "The Sopranos",
+                "Deadwood",
+                "Breaking Bad",
+                "The Leftovers",
+                "Lost",
+                "Better Call Saul",
+                "Game of Thrones",
+                "Berserk",
+                "Band of Brothers",
+                "Attack on Titan"
+            };
+
+            int arrayLengte = tvSeries.Length - 1;
+            Console.WriteLine("Geef een getal op van 0 tot " + arrayLengte);
+            int input = int.Parse(Console.ReadLine());
+
+            Console.WriteLine();            
+            Console.WriteLine(tvSeries[input]);
+            Console.WriteLine();
+            Console.ReadKey();
+            Console.WriteLine("hoe lang is de Array?");
+            Console.WriteLine("de Array lijst loopt van 0 naar " + arrayLengte);
+            Console.WriteLine();
+            Console.ReadKey();
+
+            Console.WriteLine("De complete Array is als volgt");
+            for (int index = 0; index < tvSeries.Length; index = index + 1) 
+            Console.WriteLine(tvSeries[index]);
+
+            Console.WriteLine();
+            Console.ReadKey();
+
+            Console.WriteLine("De complete Array kan als het goed is ook worden weergegeven met een foreach opdracht");
+            foreach (string goedeSeries in tvSeries)
+                Console.WriteLine(goedeSeries);
 
 
+            Console.WriteLine();
+            Console.ReadKey();
         }
     }
 }

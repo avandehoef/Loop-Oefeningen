@@ -140,6 +140,86 @@ namespace ConsoleApp6
             foreach (string goedeSeries in tvSeries)
                 Console.WriteLine(goedeSeries);
 
+            Console.WriteLine();
+            Console.ReadKey();
+
+            
+            string[] tvSeries2 = tvSeries;
+
+            Console.WriteLine("test met een tweede verwijzing naar de array");
+            Console.WriteLine();
+            foreach (string goedeSeries2 in tvSeries2)
+            Console.WriteLine(goedeSeries2);
+
+            Console.WriteLine();
+            Console.ReadKey();
+
+            tvSeries = new string []
+            {
+                "Fargo",
+                "The Sopranos",
+                "Deadwood",
+                "Breaking Bad",
+                "The Leftovers",
+                "Lost",
+                "Better Call Saul",
+                "Game of Thrones",
+                "Berserk",
+                "Band of Brothers",
+                "Attack on Titan",
+                "(extra) The Wire"
+            };
+
+
+
+
+            tvSeries[0] = "extra test 2 Friends";
+
+            Console.WriteLine("eerste test met nieuwe array (oorspronkelijke array aangepast)");
+
+            foreach (string goedeseries3 in tvSeries)
+                Console.WriteLine(goedeseries3);
+
+            Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("tweede test met verwijzing array2 = array voordat ik de array 1 heb aangepast" );
+            Console.WriteLine();
+
+            foreach (string goedeseries4 in tvSeries2)
+                Console.WriteLine(goedeseries4);
+
+            Console.WriteLine();
+            Console.ReadKey();
+
+
+            int [] test2 = 
+            {
+                1,
+                2,
+                3
+            };
+
+            Console.WriteLine("test 1 met arrays maar dan met integers, moet 1,2,3 weergeven");
+            foreach (int arrayTest in test2)
+                Console.WriteLine(arrayTest);
+            Console.WriteLine();
+            Console.ReadKey();
+
+            Console.WriteLine("test 2 met integer arrays , dit is de tweede array, gelijkgesteld aan array, moet ook 1,2,3 weergeven");
+
+            int[] test3 = test2;
+
+            foreach (int arrayTest in test3)
+                Console.WriteLine(arrayTest);
+
+            test2[0] = 3;
+
+            Console.WriteLine();
+            Console.ReadKey();
+            Console.WriteLine("nu alleen de 2e integer array, die eerder verwijst naar array 1, terwijl ik nu de eerste waarde in de array heb veranderd, deze zou nu met een 3 moeten starten");
+
+            foreach (int arrayTest in test3)
+                Console.WriteLine(arrayTest);
 
             Console.WriteLine();
             Console.ReadKey();
